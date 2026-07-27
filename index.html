@@ -36,8 +36,8 @@
   <h2>What the extension stores</h2>
   <p>The extension saves your automation settings (mode, interval, and the CSS selector of any element you choose) locally on your device using Chrome's <code>storage.local</code> API. This data never leaves your browser, is not synced to any server, and is not accessible to the developer or any third party.</p>
 
-  <h2>Why it requests access to all websites</h2>
-  <p>The extension requests the <code>&lt;all_urls&gt;</code> host permission solely so that its refresh and auto-click features can run on whichever page you choose to activate them on. It does not read, log, or transmit page content — it only reloads pages, re-fetches the current page to update a chosen element, or simulates a click on a chosen element, all triggered locally by your own settings.</p>
+  <h2>Why it requests access to the current tab</h2>
+  <p>The extension uses Chrome's <code>activeTab</code> and <code>scripting</code> permissions. These grant temporary access only to the tab you are currently viewing, and only after you click the extension icon on that tab — the extension has no standing access to any website. Automation continues to work across page reloads and navigation within the same site, but goes dormant on a tab if you navigate to a different site without re-invoking the extension there. It does not read, log, or transmit page content — it only reloads pages, re-fetches the current page to update a chosen element, or simulates a click on a chosen element, all triggered locally by your own settings.</p>
 
   <h2>Analytics and third parties</h2>
   <p>No analytics, tracking, or advertising services are used. No data is sold or shared with third parties, for any purpose.</p>
